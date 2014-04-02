@@ -2,3 +2,5 @@
 /participants.db
 
 *.pyc
+
+/.psiturk_history
