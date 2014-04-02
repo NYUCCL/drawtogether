@@ -10,7 +10,7 @@
 
 var ncols = 5,
 	original_size = 400,
-	totalwidth = 1000,
+	totalwidth = 800,
 	nrows,
 	size,
 	drawings;
