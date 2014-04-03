@@ -33,3 +33,9 @@ It’ll prompt you for a username and password which are set by the `login_usern
 `login_pw` fields of the `config.txt` file.
 
 The details of assigning payment to people after the experiment is finished is beyond the scope of this guide!  See the main [psiturk docs](http://psiturk.readthedocs.org/en/latest/)
+
+
+Example Result from the `/gallery` page
+---------------------------------------
+
+<img src="https://raw.githubusercontent.com/NYUCCL/drawtogether/master/static/images/example.png">
