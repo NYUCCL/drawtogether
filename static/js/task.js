@@ -29,6 +29,8 @@ var Drawing = function() {
 		height: 400,
 		editing: true
 	});
+	var pen = sketchpad.pen();
+	pen.width(2);
 	
 	prompt_resubmit = function() {
 		replaceBody(error_message);
@@ -47,6 +49,14 @@ var Drawing = function() {
 			error: prompt_resubmit}
 		);
 	};
+
+	$('#Undo').click(function() {
+		sketchpad.undo();
+	});
+
+	$('#StartOver').click(function() {
+		sketchpad.clear();
+	});
 
 	$('#Next').click(function() {
 		drawing_data = sketchpad.json(); 

@@ -24,6 +24,7 @@ function renderDrawing(data) {
 
 	for (var i=0; i<strokes.length; i++) {
 		strokes[i]['transform'] = 's'+sc+','+sc+',0,0';
+		strokes[i]['stroke-width']=1;
 	};
 
 	var sketchpad = Raphael.sketchpad("viewer", {
@@ -32,6 +33,8 @@ function renderDrawing(data) {
 		strokes: strokes,
 		editing: false
 	});
+	var pen = sketchpad.pen();
+	pen.width(2);
 
 };
 

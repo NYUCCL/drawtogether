@@ -1,5 +1,5 @@
 [HIT Configuration]
-title = Draw together
+title = Draw together - Super EASY and fun!
 description = Draw a simple picture using your computer mouse.
 amt_keywords = Art, Fun, Creativity
 lifetime = 24
@@ -21,7 +21,7 @@ host = 0.0.0.0
 port = 22362
 cutoff_time = 30
 logfile = server.log
-loglevel = 2
+loglevel = 0
 debug = true
 login_username = examplename
 login_pw = examplepassword
