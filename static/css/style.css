@@ -40,7 +40,7 @@ strong {
 
 
 /* these are all the same for now, but easy to modify individually */
-#container-ad, #container-error, #container-exp, #container-consent, #container-instructions, #container-questionnaire {
+#container-ad, #container-error, #container-exp, #container-consent, #container-instructions, #container-questionnaire, #container-gallery {
     position: absolute;
     top: 0px; /* Header Height */
     bottom: 0px; /* Footer Height */
@@ -59,6 +59,9 @@ strong {
   padding-top: 1%;
 }
 
+#container-gallery {
+  border: 0px;
+}
 /* ad.html  - the ad that people view first */
 #adlogo {
     float: right;
