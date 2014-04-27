@@ -44,7 +44,6 @@ var Drawing = function() {
 		psiTurk.saveData({
 			success: function() {
 			    clearInterval(reprompt); 
-                            psiTurk.computeBonus('compute_bonus', function(){finish()}); 
 			}, 
 			error: prompt_resubmit}
 		);
