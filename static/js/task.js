@@ -5,7 +5,7 @@
  */
 
 // Initalize psiturk object
-var psiTurk = PsiTurk(uniqueId, adServerLoc);
+var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 
 // All pages to be loaded
 var pages = [
