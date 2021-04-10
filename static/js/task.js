@@ -7,23 +7,28 @@
 // Initalize psiturk object
 var psiTurk = new PsiTurk(uniqueId, adServerLoc, mode);
 
+
+
+var randomLine;
 // All pages to be loaded
 var pages = [
 	"instructions/instruct-ready.html",
 	"stage.html"
 ];
-
-psiTurk.preloadPages(pages);
+const init = (async () => {
+    await psiTurk.preloadPages(pages);
+})()
 
 var instructionPages = [ // add as a list as many pages as you like
 	"instructions/instruct-ready.html"
+
 ];
 
 
 var Drawing = function() {
-	
-	psiTurk.showPage('stage.html');
 
+
+	psiTurk.showPage('stage.html');
 	var sketchpad = Raphael.sketchpad("editor", {
 		width: 400,
 		height: 400,
@@ -58,14 +63,13 @@ var Drawing = function() {
 	});
 
 	$('#Next').click(function() {
-		drawing_data = sketchpad.json(); 
+		drawing_data = sketchpad.json();
 		psiTurk.recordUnstructuredData("drawing_json", drawing_data);
 	    psiTurk.saveData({
-            success: function(){ psiTurk.completeHIT(); }, 
+            success: function(){ psiTurk.completeHIT(); },
             error: prompt_resubmit
         });
 	});
-
 };
 
 // Task object to keep track of the current phase
@@ -74,9 +78,12 @@ var currentview;
 /*******************
  * Run Task
  ******************/
-$(window).load( function(){
+$(window).on('load', async () => {
+	await init;
     psiTurk.doInstructions(
     	instructionPages, // a list of pages you want to display in sequence
     	function() { currentview = new Drawing(); } // what you want to do when you are done with instructions
+
     );
+
 });
