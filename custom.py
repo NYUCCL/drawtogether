@@ -17,7 +17,7 @@ from json import dumps, loads
 # load the configuration options
 config = PsiturkConfig()
 config.load_config()
-myauth = PsiTurkAuthorization(config)  # if you want to add a password protect route use thispyt
+myauth = PsiTurkAuthorization(config)  # if you want to add a password protect route use this
 
 # explore the Blueprint
 custom_code = Blueprint('custom_code', __name__, template_folder='templates', static_folder='static')
