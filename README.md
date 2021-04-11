@@ -3,7 +3,8 @@ drawtogether
 
 a psiturk-compatible experiment based on the drawtogther crowdsource program by @dmarkant
 
-developed with psiturk version 1.0.10dev
+developed with psiTurk version 3.1.0
+
 
 How to use
 ----------
@@ -35,7 +36,7 @@ account on psiturk.org.
 **Run live**  
 
 1. If all is going well and looks how you expect, `[psiTurk server:on mode:sdbx #HITs:0]$ mode` - to switch to "live" mode  
-1. `[psiTurk server:on mode:live #HITs:0]$ create hit` - to create the hit on the live server  
+1. `[psiTurk server:on mode:live #HITs:0]$ hit create` - to create the hit on the live server  
 1. `[psiTurk server:on mode:live #HITs:0]$ hit list active` - to monitor the progress
 1. `[psiTurk server:on mode:live #HITs:0]$ worker approve --hit <yourhitid>` - to approve and pay everyone who has finished
 

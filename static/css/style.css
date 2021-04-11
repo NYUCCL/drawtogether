@@ -37,8 +37,32 @@ strong {
 .cool {
   color: #ccccff;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1.9fr 0.5fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Header Header Header Header"
+    "canvas canvas image image"
+    "buttons buttons buttons buttons"
+    "footer footer footer footer";
+}
 
+.Header { grid-area: Header; }
 
+.canvas { grid-area: canvas; }
+
+.image { grid-area: image; }
+
+.buttons { grid-area: buttons; }
+
+.footer { grid-area: footer; }
+#exampleimagediv{
+	position: absolute;
+  top: 75px;
+  left: 75px;
+}
 /* these are all the same for now, but easy to modify individually */
 #container-ad, #container-error, #container-exp, #container-consent, #container-instructions, #container-questionnaire, #container-gallery {
     position: absolute;
